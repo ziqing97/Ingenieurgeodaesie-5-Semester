@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{setspace,graphicx,amsmath,geometry,fontspec,titlesec,soul,bm,subfigure}
+\titleformat{\section}[block]{\LARGE\bfseries}{\arabic{section}}{1em}{}[]
+\titleformat{\subsection}[block]{\Large\bfseries\mdseries}{\arabic{section}.\arabic{subsection}}{1em}{}[]
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\arabic{subsection}-\alph{subsubsection}}{1em}{}[]
+\titleformat{\paragraph}[block]{\small\bfseries}{[\arabic{paragraph}]}{1em}{}[]
+\setmainfont{Times New Roman}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand\contentsname{Inhaltverzeichnis}
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+	\newpagestyle{main}{            
+		\sethead{}{Kapitel 1}{}     
+		\setfoot{}{\thepage}{}
+		\headrule
+		\footrule
+			}
+	\pagestyle{main}
+\tableofcontents
+\newpage
+\section{Einführung}
+\subsection{Definitionen Ingenieurgeodäsie}
+Ingenieurvermessung = Ingenieurgeodäsie
+\newline
+Englisch: Enginierung Surveying
+\newline
+Frazösisch: Topometrie de genie civil
+\newline
+FIG: Fédération internationale des géomètres (International Association of Surveying)
+\newline
+\newline
+\textbf{Neue Definition:}
+\newline
+2015 Deutsche Geodätische Kommision:
+Ingenieurgeodäsie ist die Beherrschung von groß- und kleinraumigen geometrieorientierten Fragestellungen mit Schwerpunkt auf
+\begin{itemize}
+\item Qualität
+\item Sensorik
+\item Bezugssystem
+\end{itemize}
+für
+\begin{itemize}
+\item Aufnahme
+\item Absteckung
+\item Monitoring
+\end{itemize}
+\subsection{Klassische Aufgabe}
+1. Aufnahmevermessung: Erfassung des Ist-Zustandes vor Bauausführung.
+\newline
+Beispiel: 
+\begin{itemize}
+\item topographische Geländeaufnahme für eine Straßentrasse;
+\item Aufnahme eines Leitungsnetzes eines Chemiewerkes.
+\end{itemize}
+2. Projektierung (nur geometrische Anteile): Festlegung geometrischer Größen des Soll-Zustandes eines Objektes(Bauentwurf, Trassenentwurf).
+\newline
+Beispiel: 
+\begin{itemize}
+\item eine Rechnung einer Bautrasse nach den Kriterien Sicherheit
+\item zurückgelegte Weg
+\item Ökologie
+\end{itemize}
+3. Absteckung = Übertragung geometrischer Soll-Größen in die Örtlichkeit.
+\newline
+Beispiel: 
+\begin{itemize}
+\item Achsabsteckung
+\item Maschinensteurung
+\item Einrichtung von Maschinen
+\end{itemize}
+4. Abnahmevermessung = Erfassung des Ist-Zustand nach Bauausführung (unabhängige Kontrolle von Absteckung + Bauausführung und wichtig für Abrechnung).
+\newline
+Beispiel:
+\begin{itemize}
+\item Erdmassenermittlung
+\item Achse Überprüfung
+\item Grenzabstands Überprüfung
+\end{itemize}
+5. Überwachungsvermessung (Monitoring) = Vermessung zur Feststellung von Objektbewegungen und -verformungen.
+\newline
+Beispiel:
+\begin{itemize}
+\item Senkungsüberwachung im Bergbau
+\item Brückenüberwachung oder Tunnel, Talsperren
+\item Turbinenüberwachung
+\end{itemize}
+\newpage
+\end{document}
