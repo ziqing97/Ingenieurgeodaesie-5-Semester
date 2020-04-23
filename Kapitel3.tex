@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+\usepackage{setspace,graphicx,amsmath,geometry,fontspec,titlesec,soul,bm,subfigure}
+\titleformat{\section}[block]{\LARGE\bfseries}{\arabic{section}}{1em}{}[]
+\titleformat{\subsection}[block]{\Large\bfseries\mdseries}{\arabic{section}.\arabic{subsection}}{1em}{}[]
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\arabic{subsection}-\alph{subsubsection}}{1em}{}[]
+\titleformat{\paragraph}[block]{\small\bfseries}{[\arabic{paragraph}]}{1em}{}[]
+\setmainfont{Times New Roman}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand\contentsname{Inhaltverzeichnis}
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+	\newpagestyle{main}{            
+		\sethead{}{Kapitel 3}{} 
+		\setfoot{}{\thepage}{}
+		\headrule
+		\footrule
+			}
+	\pagestyle{main}
+\tableofcontents
+\newpage
+\section{Qualität in der Ingenieurgeodäsie}
+\subsection{Qualitätsdefinition und -modelle}
+\subsection{Qualität im Bauprozess}
+Hauptqualitätsparameter sind Toleranz, die dem Qualitätsmerkmal Korrektheit zugeordnet werden können.(manchmal wird aber von Genauigkeit gesprochen) 
+\begin{itemize}
+\item Nennenmaß $N$ / Sollmaß $S$
+\item Höchstmaß $G_o$
+\item Mindestmaß $G_u$
+\item Mittemaß $C = \frac{1}{2} (G_o + G_u)$ ($=N$ wenn symmetrisch)
+\item Obere Abmaß: $A_o= G_o - N$
+\item Untere Abmaß: $A_u = G_u - N$
+\item Toleranz: $T = G_o - G_u = A_u - A_o$
+\end{itemize}
+Die Toleranz ist der Spielerraum, der der allem am Bau Beteiligten zur Behandlung zufälliger Abweichungen zur Verfügungen steht.\newline
+Die Toleranz bezieht sich auf eine Bezugstemperatur und verändert sich bei Abweichungen hiervon.\newline
+\newline
+Nach Bau / Realisierung: \newline
+Istmaß $I$ ist Ergebnis einer Messung nach Bauausführung, darf nicht außerhalb der Toleranz liegen. Istabmaß $A_i = I - N$.\newline
+Forderung: $G_u \leq I \leq G_o$ \newline
+\newline
+Toleranzfortpflanzung / Toleranzkette.
+\begin{itemize}
+\item  $T_i$: Einzeltoleranzen (Eingangsgrößen)
+\item $T_G$: Gesamttoleranz (Ausgang)
+\item $x_i$: Einflussgrößen
+\item $y$: Zielgrößen
+\end{itemize}
+2 Möglichkeiten\newline
+a. quadratische Fortpflanzung
+\begin{gather*}
+T_G = \sqrt{\sum_{i = 1}^{n} (\frac{\partial y}{\partial x_i})^2 T_i^2} \\
+T_G = \sqrt{\sum_{i = 1}^{n} T_i^2} \quad   (vereinfacht)
+\end{gather*}
+Wenn Abweichung klein und zufällig, vor allem Bauwesen.\newline
+\newline
+b. lineare Fortpflanzung\newline
+\begin{gather*}
+T_G = \sum_{i = 1}^{n} T_i
+\end{gather*}
+Wenn Abweichung relative groß und Tendenz zur Systematisch besteht, häufig im Maschinenbau. Abschätzung pessimitisch.\newline
+\newline
+Immer gilt: $T_{G,linear} > T_{G,quadr}$.\newline
+Über Toleranz: hinausgesehende Pasmik werden im Bauwesen kaum genutzt. Hierzu nur vergangene und aktuelle Forschungsprojekt. 
+\subsection{Qualität im Ingenieurgeodätischen Prozess}
+Wesentlicher Qualitätsmerkmal ist die Genauigkeit. (meist mit Standardabweichung als Parameter) \newline
+\newline
+Wahre Abweichung: $\eta = x-\tilde{x} = \Delta + \varepsilon$ \newline
+Zufällige Abweichung $E(\varepsilon) = 0 \longrightarrow$  Prezision/Widerholstandardabweichung \newline
+Systemmatische Abweichung: $E(\Delta) \neq 0 \longrightarrow$ Richtigkeit, Korrektheit, Vergleichsabweichung. \newline
+\newline
+In der Geodäsie werden systemmatische Abweichung häufig in bekannte und unbekannte systemmatische Abweichung unterteilt: 
+\begin{itemize}
+\item bekannte Abweichung werden eliminiert (z.B. durch Kalibrierung)
+\item unbekannte Abweichung werden durch Messordnung randomisiert und als zufällig behandelt.
+\end{itemize}
+Widerholstandardabweichung (unter identischen Bedingungen ermittelte) (Innere Genauigkeit):
+\begin{gather*}
+\sigma_{\varepsilon} = \frac{1}{n-1} \sqrt{\sum_{i=1}^{n} \varepsilon^2_i}
+\end{gather*}
+Vergleichstandardabweichung (unter möglichst unterschiedliche Bedingungen) (Äußere Genauigkeit):
+\begin{gather*}
+\sigma = \sqrt{\sigma_{\varepsilon}^2 + \sigma_{\Delta}^2}
+\end{gather*}
+Konfidenzbereich:
+\begin{equation*}
+p(\bar{x} - k_{\sigma} \leq \mu \leq \bar{x} + k_{\sigma})
+\end{equation*}
+$k$ ist im Prinzip das Quantil der Verteilungsfunktion. Bei Normalverteilung gilt:
+\begin{itemize}
+\item $k \approx 1 \longrightarrow \alpha = 32\% \quad p=68\%$
+\item $k \approx 2 \longrightarrow \alpha = 5\% \quad p=95\%$
+\item $k \approx 3 \longrightarrow \alpha = 0,03\% \quad p=99,97\%$
+\end{itemize}
+Qualitätsmerkmale Genauigkeit, Zuverlässigkeit sind für geodätische Netze bekannt; für Prozesse ist Entwicklungsbedarf
+\subsection{Zusammenhang zwischen Standardabweichungen und Toleranz}
+\begin{gather*}
+T = \sqrt{T_M + T_A}
+\end{gather*}
+ $T_A$: Ausführungstoleranz $= \sqrt{T_{Fertigung}^2 + T_{Montage}^2}$ \newline
+ $T_M$: Vermessungstoleranz,häufig als Angabe in Prozent $P$ an der Gesamttoleranz $T \rightarrow T_A = (1-P)T$ \newline
+ Qualität Toleranzfortpflanzung:
+ \begin{align*}
+ T^2 = & T_M^2 + T_A^2 \\
+ = & T_M^2 + (1-P)^2 T^2 \\
+ T_M^2 = & T^2 - T_A^2 \\
+ = & T^2 (1-(1-P)^2)	\\
+ T_M = & T \sqrt{2P-P^2}
+ \end{align*}
+ Beispiel: $P = 10 \% \longrightarrow T_M = 0,44T$ \newline
+ Prinzipiell darf kein Messwert außerhalb der Toleranz liegen. \newline
+ Anhährung an der Toleranz über Konfidenzbereich.
+ \begin{equation*}
+ T_M = C_O(obere) - C_U(untere)
+ \end{equation*}
+ C: Grenzen des Konfidenzbereiches.
+ \begin{gather*}
+ P(C_U \leq \mu \leq C_O) = 1-\alpha \\
+ P(\bar{x} - k \cdot \sigma \leq \mu \leq \bar{x} + k \cdot \sigma) = 1-\alpha \\
+ T_M = C_O - C_U = 2 \cdot k \cdot \sigma
+ \end{gather*}
+ $k$: Quantil der Verteilungsfunktion i.d.R wird Normalverteilung vorausgesetzt.
+ \begin{gather*}
+ 1-\alpha = 95\% \longrightarrow k=1,96 \\
+ 1-\alpha = 99,75\% \longrightarrow k \approx 3 \\
+ \sigma = \frac{T_M}{2 \cdot k}
+ \end{gather*}
+ Beispiel: $k=2$, $T_M = 0,44T \longrightarrow \sigma = 0,11T$
+ \begin{table}[ht] \centering
+ 	\begin{tabular}{|l|l|l|l|}
+ 		\hline
+ 		P   &  $\frac{T_M}{T}$    &  $\frac{\sigma}{T} (k=2)$    &   $\frac{\sigma}{T} (k=3)$   \\ \hline
+ 		0,1 & 0,44 & 0,11 & 0,07 \\ \hline
+ 		0,2 & 0,60 & 0,15 & 0,10 \\ \hline
+ 		0,3 & 0,7  & 0,18 & 0,12 \\ \hline
+ 		0,5 & 0,87 & 0,22 & 0,14 \\ \hline
+ 		0,9 & 0,99 & 0,25 & 0,16 \\ \hline
+ 	\end{tabular}
+ \end{table}
+\newline
+In der Praxis: $P$ zwischen $0,3$ und $0,5$, $\sigma = \frac{1}{5}T\ (k=2)$, $\sigma = \frac{1}{8}T\ (k=3)$ \newline
+\newline
+Beispiel:\newline
+Lagetolerenz einer Straßenachse: $5\ cm \longrightarrow$ Verwendung Faustformel für $\alpha = 5 \%$
+\begin{equation*}
+\sigma = \frac{1}{5} T  = 1\ cm \quad 
+\end{equation*}
+$P$ zwischen $[0,3\quad 0,5]$, $k=2$ \newline
+Tachymeter mittelere Genauigkeit: 
+\begin{gather*}
+\sigma_s = \sqrt{(5mm)^2 + (5ppm)^2} \\
+\sigma_r = 1mgon\\
+\sigma_w=\sqrt{2} \sigma_r\\
+\sigma_p=\sqrt{\sigma_Q^2 + \sigma_L^2}
+\end{gather*}
+\begin{itemize}
+\item Längst. $\sigma_L \rightarrow$ Strecke \\
+\item Querst. $\sigma_Q \rightarrow$ Winkel
+\end{itemize}
+\begin{gather*}
+\sigma_L = \sigma_s\\
+\sigma_Q = \sigma_w \frac{s}{\rho}
+\end{gather*}
+\begin{table}[ht] \centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		s & 200m  & 400m   \\ \hline
+		$\sigma_L$ & 5,1mm & 5,4mm  \\ \hline
+		$\sigma_Q$ & 4,4mm & 8,8mm  \\ \hline
+		$\sigma_p$ & 6,7mm & 10,3mm \\ \hline
+	\end{tabular}
+\end{table}
+\newline
+Standardabweichung eingehalten; Tachymeter mittele Genauigkeit kann gesetzt werden. 
+\subsection{Messunsicherheit nach GUM}
+GUM: Guide for the expression of uncentaining in measurment. \newline
+Unsicherheit: 
+\begin{itemize}
+\item Verwendung als Kriterium analog zu Genauigkeit
+\item Verwendung als Parameter; hiervon sind verschiedene definiert
+\end{itemize}
+Type A für zufällige Einflüsse (wie unter wiederholbar), Type B für (rest) systematische Einflüsse(über Monte Carlo Simulation). \newline
+Kombinierte Unsicherheit
+\begin{gather*}
+U_C = \sqrt{U_A^2 + U_B^2} \\
+\end{gather*}
+Formel gilt für nicht korreliert Fehlerquellen, aber erweiterbar, gewisse Analogie zum Elementarfehlermodell.	
+\begin{equation*}
+U = k \cdot U_C
+\end{equation*}
+Kennwert der einen Bereich um den Messwerte charakterisiert, der zu einem Großteil die zum Messwert gehörige Verteilung beinhaltet.\newline
+Eine direkte Verbindung zum Konfidenzintervall ist nicht gegeben, da Normalverteilung nicht vorausgesetzten werden kann.\newline
+Erwartungsfaktor $k$: Zahlenfaktor zwischen kombinierte und erweiterte Unsicherheit, in der Regel zwischen 2 und 3(bei Normalverteilung würde das $\alpha = 5\%	$ bzw. $\alpha =0,3\%$ bedeuten), analog zum Konfidenzbereich, aber ohne statistische Aussage. 
+\end{document}
