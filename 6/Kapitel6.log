@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 00:32
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 05:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -552,14 +552,38 @@ Overfull \hbox (18.20126pt too wide) in paragraph at lines 38--39
 e durch Vermessungskreisel 
  []
 
-[2] (./Kapitel6.aux) ) 
-Here is how much of TeX's memory you used:
- 17037 strings out of 492472
- 351951 string characters out of 6129299
- 428129 words of memory out of 5000000
- 21453 multiletter control sequences out of 15000+600000
- 539006 words of font info for 68 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 45i,6n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+[2]
+Overfull \hbox (3.97855pt too wide) in paragraph at lines 66--67
+[]\TU/TimesNewRoman(0)/m/n/12 Kreisel weicht mit den Präzensionsbewegung rechtw
+inklig aus Rotationsachse des Kreisels
+ []
 
-Output written on Kapitel6.pdf (2 pages).
+File: EinflussBreite.png Graphic file (type bmp)
+<EinflussBreite.png>
+File: EinflussAuslenkung.png Graphic file (type bmp)
+<EinflussAuslenkung.png>
+[3]
+File: Ableser.png Graphic file (type bmp)
+<Ableser.png>
+
+Overfull \hbox (31.23636pt too wide) in paragraph at lines 114--115
+[]\TU/TimesNewRoman(0)/m/n/12 Nachführen des Lichtzeigens auf der Skalermittel 
+durch Drehen der Alhidade(Theodolitoberbau)
+ []
+
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+[7] (./Kapitel6.aux) ) 
+Here is how much of TeX's memory you used:
+ 17060 strings out of 492472
+ 352392 string characters out of 6129299
+ 431129 words of memory out of 5000000
+ 21469 multiletter control sequences out of 15000+600000
+ 539014 words of font info for 69 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 45i,8n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Kapitel6.pdf (7 pages).

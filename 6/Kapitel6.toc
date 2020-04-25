@@ -2,4 +2,8 @@
 \contentsline {subsection}{\numberline {1.1}Vermessungsaufgaben beim Tunnelbau}{2}%
 \contentsline {subsubsection}{\numberline {1.1.1}Absteckung}{2}%
 \contentsline {subsubsection}{\numberline {1.1.2}Abnahme und Überwachung}{2}%
-\contentsline {subsection}{\numberline {1.2}Vermessungskreisel}{2}%
+\contentsline {subsection}{\numberline {1.2}Vermessungskreisel}{3}%
+\contentsline {subsubsection}{\numberline {1.2.1}Grundprinzip}{3}%
+\contentsline {subsubsection}{\numberline {1.2.2}Bauformen und Gerätesysteme}{4}%
+\contentsline {subsubsection}{\numberline {1.2.3}Messverfahren}{4}%
+\contentsline {subsubsection}{\numberline {1.2.4}Korrektionen und Reduktion}{7}%
