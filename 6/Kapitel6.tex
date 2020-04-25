@@ -204,12 +204,84 @@ Vorteile
 	\item höchste Genauigkeit: ca. 1mgon
 \end{itemize}
 \subsubsection{Korrektionen und Reduktion}
-1) Korrektionen \newline
-a) Polbewegung \newline
+1) Korrektion
+a) Gerätekonstante $E$
+\begin{itemize}
+	\item Abweichung der Nullmarken der Skala gegenüber dem Momentanpol (Nullpunktfehler)
+	\item Bestimmung Kreiseln aus Soll-Azimuts
+\end{itemize}
+b) Fehlwinkel $\alpha$
+\begin{itemize}
+	\item nur bei Aufsatzkreiseln 
+	\item zwischen Kreisellage und Zielfernrohr des Theodolites
+\end{itemize}
+c) In der Regel werden $E$ und $\alpha$ In einem Wert zusammengefasst
+\begin{equation*}
+A_m = \bar{z} - N + E - \alpha \Longrightarrow A_m = \bar{z} - N + E
+\end{equation*}
+2) Reduktion \newline
+a) Polbewegung 
 \begin{itemize}
 	\item CIO: Conventional International Origin
 	\item Astromisches Azimut: $A = A_m - \beta$
 	\item Polreduktion: $\beta = \frac{x_p}{den}$
+	\item aktuelle Polkoordiate: $x_P$, $y_P$
+	\item astronomische Standpunktkoordinate: $\Lambda_S, \Phi_S$
+	\item Querkrümmungsradius der Erde: $R$
 \end{itemize}
-
+Abschätzung: 
+\begin{itemize}
+	\item Polschwankung $<0,3''$
+	\item $\Rightarrow \beta < 0,15$mgon
+	\item vernachlässigbar
+\end{itemize}
+b) Übergang zum Ellipsoid
+\begin{itemize}
+	\item Ellipsoidisches Azimut $\alpha = A + \varepsilon$
+	\item Laplace-Reduktion(verkürzt): $\varepsilon = -\eta \tan(\Phi_S)$
+	\item Komponente der Lotabweichung: $\eta = (\Lambda - \lambda)\cos(\varphi)$,($\Phi_S$ kann durch $\phi_S$ ersetzt werden)
+\end{itemize}
+Abschätzung: (mit $z=100$gon, und $h_z \leq 1$km)
+\begin{itemize}
+	\item $\varepsilon \leq 1$mgon
+\end{itemize}
+Bei Gyromat zu berücksichtigen \newline
+Bei Fennel TK4 nicht berücksichtigen \newline
+\newline
+c) Übergang in die Ebene
+\begin{itemize}
+	\item Richtungswinkel: $T = \alpha - \gamma$
+	\item Meridiankonvergenz: $\gamma = (\lambda_s - \lambda_0) \cdot \sin(\varphi_s) = \frac{200gon}{\pi R} y_s \tan(\varphi_s)$
+	\item ellipsoidische Breite des Standpunkts: $y_s$
+	\item ellipsoidische Länge des Standpunkts, des Zentralmeridians: $\lambda_s$, $\lambda_0$
+	\item Abstand des Standpunkts von Zentralmeridian im UTM-System
+\end{itemize}
+Abschätzung:
+\begin{gather*}
+	\varphi_s = 49° \\
+	\lambda_s - \lambda_0 \leq 1,5° \\
+	\Rightarrow \gamma = 1,25gon \\
+	\Rightarrow wichtigste\; Reduktion
+\end{gather*}
+d) Berücksichtigung der Abbildungsreduktion
+\begin{itemize}
+	\item Richtungswinkel: $t = T - \delta$
+	\item Richtungsreduktion $\delta = \frac{\rho}{b \cdot R^2} (x_z - x_s) \cdot (2y_s + y_z)$
+	\item Zielpunkt: $x_z$, $y_z$
+	\item Standpunkt: $x_s$, $y_s$
+\end{itemize}
+Abschätzung:
+\begin{gather*}
+	y_s = y_z < 100km \\
+	x_z - x_s < 1km \\
+	\Rightarrow \sigma < 0,08mgon \\
+	\Rightarrow ohne\; Bedeutung \\
+	\Rightarrow T = t
+\end{gather*}
+Zusammenfassung
+\begin{itemize}
+	\item Gyromat: $t = A + \varepsilon - \gamma$
+	\item Fennel: $t = A - \gamma$
+\end{itemize}
+\subsection{Bestimmung des Durchschlagspunktes}
 \end{document}

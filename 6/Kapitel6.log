@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 05:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 07:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -571,12 +571,12 @@ Overfull \hbox (31.23636pt too wide) in paragraph at lines 114--115
 durch Drehen der Alhidade(Theodolitoberbau)
  []
 
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
+[4] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
  []
 
-[7] (./Kapitel6.aux) ) 
+[8] [9] (./Kapitel6.aux) ) 
 Here is how much of TeX's memory you used:
  17060 strings out of 492472
  352392 string characters out of 6129299
@@ -586,4 +586,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  45i,8n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Kapitel6.pdf (7 pages).
+Output written on Kapitel6.pdf (9 pages).

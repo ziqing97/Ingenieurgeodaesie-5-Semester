@@ -7,3 +7,4 @@
 \contentsline {subsubsection}{\numberline {1.2.2}Bauformen und Gerätesysteme}{4}%
 \contentsline {subsubsection}{\numberline {1.2.3}Messverfahren}{4}%
 \contentsline {subsubsection}{\numberline {1.2.4}Korrektionen und Reduktion}{7}%
+\contentsline {subsection}{\numberline {1.3}Bestimmung des Durchschlagspunktes}{9}%
