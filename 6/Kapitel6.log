@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 07:18
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,7 +576,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
  []
 
-[8] [9] (./Kapitel6.aux) ) 
+[8]
+Overfull \hbox (44.21529pt too wide) in paragraph at lines 291--295
+\TU/TimesNewRoman(0)/m/n/12 Festlegung der Station $\OML/cmm/m/it/12 P[]$\TU/Ti
+mesNewRoman(0)/m/n/12 , ab der die Kreiselmessungen einen Genauigkeitsgewinn br
+ingen.(Bedingungen
+ []
+
+[9]
+Overfull \hbox (8.40042pt too wide) in paragraph at lines 332--334
+\TU/TimesNewRoman(0)/m/n/12 Annährung(Längenänderung) zwischen Hangendem (Tunne
+ldecke) und Liegendem(Tunnelsohle) 
+ []
+
+[10] [11] (./Kapitel6.aux) ) 
 Here is how much of TeX's memory you used:
  17060 strings out of 492472
  352392 string characters out of 6129299
@@ -584,6 +597,6 @@ Here is how much of TeX's memory you used:
  21469 multiletter control sequences out of 15000+600000
  539014 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,8n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,10n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Kapitel6.pdf (9 pages).
+Output written on Kapitel6.pdf (11 pages).

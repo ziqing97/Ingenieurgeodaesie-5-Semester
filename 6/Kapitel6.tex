@@ -284,4 +284,57 @@ Zusammenfassung
 	\item Fennel: $t = A - \gamma$
 \end{itemize}
 \subsection{Bestimmung des Durchschlagspunktes}
+Problem bei Tunnelpolygon: Einseitig umgeschlossen. daher schlechtes Fehlerverhalten und geringen Zuverlässigkeit. $\longrightarrow$ Zuverlässigkeit kann durch Messungen oder Doppelpolygongzug verbessert werden, Fehlerverhalten nicht. \newline
+Einsatz von Kreiselmessung:
+\begin{equation*}
+	t_{k,k+1} = t_{0,1} + \sum_{i=1}^{k} \beta_i + k \cdot 200gon - v \cdot 400gon
+\end{equation*}
+wobei $t$ Richtungswinkel im Polygonzug ist.\newline
+Varianz: $\sigma_{t_{k,k+1}}^2 = \sigma_{t_{0,1}}^2 + k\cdot \sigma_{\beta}^2$, mit $\sigma_{\beta}^2 = 2\sigma_{r}^2$. $\sigma_r$ ist Standardabweichung der Richtungsmessung. \newline
+Festlegung der Station $P_k$, ab der die Kreiselmessungen einen Genauigkeitsgewinn bringen.(Bedingungen für den Einsatz von Kreiselmessung:
+\begin{gather*}
+	\sigma_N^2 \leq \sigma_{t_{k,k+1}}^2 \\
+	\Longrightarrow \sigma_N^2 \leq \sigma_{t_{0,1}}^2 + k \cdot \sigma_{\beta}^2 \\
+	\Longrightarrow k \geq \frac{\sigma_N^2 - \sigma_{t_{0,1}}^2}{\sigma_{\beta}^2}
+\end{gather*}
+Wenn Portalnetz "fehlerfrei", dann $\sigma_{t_{0,1}}^2 = \sigma_r^2$
+\begin{equation*}
+	k \geq \frac{\sigma_N^2 - \sigma_r^2}{2 \cdot \sigma_r^2}
+\end{equation*}
+Auswirkung der Kreiselmessung auf die Durchschlagsgenauigkeit(siehe Lagegenauigkeit Polygonzug)
+\begin{itemize}
+	\item Längsfehler: $\sigma_L = \sigma_s \cdot \sqrt{k}$
+	\item Querfehler: $\sigma_Q = s \cdot \sqrt{k^2 \cdot \sigma_{t_{0,1}}^2 + \frac{1}{6}k(k-1)(2k-1) \cdot \sigma_{\beta}^2}$
+	\item Gesamtfehler: $\sigma_p = \sqrt{\sigma_Q^2 + \\sigma_L^2}$
+	\item Vortrieb von Beiden Seiten $\sigma_{2p} = \sqrt{\sigma_{p_1}^2 + \sigma_{p_2}^2} = \sqrt{2}\sigma_p$
+\end{itemize}
+Bei Einführung von Kreiselmessungen wird die Kovarianzfortpflanzung unterbericht und es entstehet Teilpolygon
+\begin{gather*}
+	\sigma_{Q,i} = s \sqrt{k^2 \sigma_N^2 + \frac{1}{6} k(k-1)(2k-1) \sigma_{\beta}^2} \\
+	\sigma_Q = \sqrt{\sum_{i=1}^{l} \sigma_{Q,i}^2}
+\end{gather*}
+$k$ ist Anzahl der Punkte im Teilpolygon. $l$ ist Anzahl der Teilpolygon.\newline
+ für erstes Teilpolygon
+ \begin{equation*}
+ 	\sigma_N = \sigma_{t_{0,1}} = \sigma_r
+ \end{equation*}
+ $\sigma_L$ unverändert.
+ \subsection{Vortriebssteuerung}
+ Prinzip:
+ \begin{itemize}
+ 	\item auf einem Theodolit wird ein Laser montiert, der die Referenzlinse vorgibt(Absteckung)
+ 	\item Abbildung des Strahls auf 2 Zieltafeln
+ 	\item Soll-Ist-Vergleich für Position und 3D Orientierung
+ 	\item auf Basis dieser Abweichungen erfolgt die Steuerung der TBM
+ 	\item Später Ersatz der Zieltafeln durch aktive Prismen, zusätzliche Messung der Längs- und Querneigung
+ \end{itemize}
+\subsection{Konvergenzmessungen}
+Definition Konvergenz: Bezeichung im Bergbau für aufgrund des Gebergsdrucksauftretende Annährung(Längenänderung) zwischen Hangendem (Tunneldecke) und Liegendem(Tunnelsohle)\newline
+Konvergenzmessverfahren
+\begin{itemize}
+	\item Invardrähle (wenig praktikalel)
+	\item Neigungsmessung (nur beim Tübbingbau/TBM)
+	\item Tachymetrische Messung (Standard)
+	\item Laserscanning (flächenhaft)
+\end{itemize}
 \end{document}
