@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Ingenieurgeodätische Netze}{2}% 
+\contentsline {subsection}{\numberline {1.1}Punktvermarkung}{2}% 
+\contentsline {subsection}{\numberline {1.2}Netzdimension und Koordinatensysteme}{2}% 
+\contentsline {subsection}{\numberline {1.3}Netzqualität}{2}% 
+\contentsline {subsubsection}{\numberline {1.3.1}Genauigkeit}{3}% 
+\contentsline {paragraph}{lokale Genauigkeitsmaße}{3}% 
+\contentsline {paragraph}{Globale Genauigkeitsmaße}{4}% 
+\contentsline {paragraph}{Vergleich verschiedener Messverfahren}{6}% 
+\contentsline {subsubsection}{\numberline {1.3.2}Zuverlässigkeit}{6}% 
+\contentsline {paragraph}{Innere Zuverlässigkeit}{7}% 
+\contentsline {paragraph}{Äußere Zuverlässigkeitsmaße}{9}% 
+\contentsline {paragraph}{Vergleich verschiedenen Messverfahren}{9}% 
+\contentsline {subsection}{\numberline {1.4}Datumsdefinition}{11}% 
+\contentsline {subsection}{\numberline {1.5}Datumsverfügung}{12}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Einfügung}{12}% 
+\contentsline {subsection}{\numberline {1.6}Datumstransformationen}{14}% 
+\contentsline {subsubsection}{\numberline {1.6.1}Allgemeines}{14}% 
+\contentsline {subsubsection}{\numberline {1.6.2}Kombination von terrestrischen und GNSS messungen}{14}% 
