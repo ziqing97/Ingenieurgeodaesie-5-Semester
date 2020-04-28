@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{setspace,graphicx,amsmath,geometry,fontspec,titlesec,soul,bm,subfigure}
+\titleformat{\section}[block]{\LARGE\bfseries}{\arabic{section}}{1em}{}[]
+\titleformat{\subsection}[block]{\Large\bfseries\mdseries}{\arabic{section}.\arabic{subsection}}{1em}{}[]
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\arabic{subsection}-\alph{subsubsection}}{1em}{}[]
+\titleformat{\paragraph}[block]{\small\bfseries}{[\arabic{paragraph}]}{1em}{}[]
+\setmainfont{Times New Roman}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand\contentsname{Inhaltverzeichnis}
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+	\newpagestyle{main}{            
+		\sethead{}{Kapitel 6}{} 
+		\setfoot{}{\thepage}{}
+		\headrule
+		\footrule
+			}
+	\pagestyle{main}
+\tableofcontents
+\newpage
+\section{Flächen- und Volumenbestimmung}	
+\subsection{Flächenberechnung}
+Anwendung:
+\begin{itemize}
+	\item Grundlage für Volumenberechnung
+	\item Katasteranwendungen
+\end{itemize}
+Dreieck:
+\begin{gather*}
+	2F_b = g \cdot h \\
+\end{gather*}
+$g$: Grundseite, $h$: Höhe \newline
+Trapez
+\begin{gather*}
+	2 \cdot F_T = (g_1 + g_2) \cdot h
+\end{gather*}
+$g_1$, $g_2$: Grundseite \newline
+Verschränkte Trapez:
+\begin{gather*}
+	2 \cdot F_v = a \cdot (h_1 - h_2)
+\end{gather*}
+$a$: Grundseite, $h_1$: Höhe innerhalb der Figur, $h_2$: Höhe außerhalb der Figur \newline
+Gesamtfläche:
+\begin{gather*}
+	F_{ges} = \sum F_D + \sum F_T + \sum F_V
+\end{gather*}
+Genauigkeitabschätzung Dreieck: \newline
+Beispiel 1: ($\Delta x$, $\Delta y$ aus orthogonale Aufnahme)
+\begin{gather*}
+	\Delta x_1 \approx \Delta y_1 \approx 30m \\
+	n = 6\; Dreiecke \\
+	\sigma_s = 0,03m\; Messband \\
+	\sigma_{rw} = 0,05 gon\; Winkelprisma \\
+	\sigma_g = sigama_s \\
+	\sigma_h = \sqrt{\sigma_s^2 + (\sigma_{rw} \frac{\pi}{200} h)^2} \\
+	\Longrightarrow \sigma_g = 0,03 m\quad \sigma_h0,04m \\
+	\Longrightarrow \sigma_F = 1,84 m^2
+\end{gather*}
+Beispeil 2:
+\begin{itemize}
+	\item Maße aus Karte abgefriffen, Maßstab 1:100, Genauigkeit $\sigma_k = 0,2mm$
+	\item Längenmessungsgenauigkeit $\sigma_L = \sqrt{2} \sigma_k = 0,28mm$
+	\item Genauigkeit $g_i$, $h_i$, $a_i$, $\sigma_g = \sigma_h = \sigma_L \cdot h = 0,28m$
+\end{itemize}
+\begin{equation*}
+	\Longrightarrow \sigma_F = 14,5m^2
+\end{equation*}
+Flächenberechnung aus Polarelementen: \newline
+Zerlegung in Dreiecke
+\begin{gather*}
+	2 \cdot F_D = s_i \cdot s_{i+1} \cdot \sin(r_{i+1} - r_i) \\
+\end{gather*}
+$s_i$, $s_{i+1}$: Strecken zur den Flächeneckpunkten, $r_i$, $r_{i+1}$: Richtungen zu den Flächeneckpunkten\newline
+Gesamtfläche
+\begin{equation*}
+	2 \cdot F_{ges} = \sum_{i=1}^{n} s_i\cdot s_{i+1} \sin(r_{r+1} - r_i)
+\end{equation*}
+\begin{itemize}
+	\item Definition im Uhrzeigersinn
+	\item Sinusfunktion definiert das Vorzeichen
+	\item mit n-Achse der Eckpunkt (bei $i=n \Rightarrow i+1 =1$)
+	\item im Beispiel: $F_{ges} = F_1 + F_2 + F_3 + F_4 - F_5 - F_6$
+\end{itemize}
+Beispiel zur Genauigkeitabschätzung \newline
+Gauß'sche Dreiecksformel
+\begin{gather*}
+	\Delta x_i \approx \Delta y_i \approx 30m
+\end{gather*}
+$n=6$ Dreiecke, $\sigma_x = \sigma_y = 0,01$m (aus Katasteraufnahme) $\Rightarrow \sigma_F = 0,52 m^2$ \newline
+Systematische Einflüsse: \newline
+Korrektur aufgrund Projektion(z.B UTM/Gauß-Krüger)
+\begin{gather*}
+	r_{UTM} = \frac{F \cdot y_m^2}{R^2} \\
+\end{gather*}
+$R$: Erdradius, $y_m$: Abstand vom Schnittmeridian. \newline
+Beispiel:
+\begin{gather*}
+	F = 450m^2 \\
+	y_m = 98000m \\
+	R = 6380 km \\
+	\Rightarrow r_{UTM} = 0,106m
+\end{gather*}
+Papierverzug bei Erfassung aus Karte\newline
+Flächenmaßstab $k_{p,x}$ und $k_{p,y}$; hier wird angenommen $k_p = k_{p,x} = k_{p.y}$ \newline
+Beispiel:
+\begin{gather*}
+	2F = h\cdot g + h \cdot g (2 k_p + k_p^2) \\
+	2F = h \cdot g + h \cdot g \cdot 2 \cdot k_p = \gamma_p \\
+	k_p = \frac{3}{1000}\quad (typisch) \\
+	F = 450m^2 \\
+	h \approx g \approx 30m \\
+	\Longrightarrow 2 \cdot \gamma_p = 1,35 m^2
+\end{gather*}
+\subsection{Volumenberechnung}
+Datenerfassungsverfahren bei der Volumenbestimmung 
+\begin{itemize}
+	\item Tachymetrie, GNSS, Flächennivellement $\Longrightarrow$ Messung von Rastern und Charakteristischen Punkten (z.B Böschungslinien)
+	\item Terrestischer Laserscanning, Photogrammetrie, UAV $\Longrightarrow$ Messung von Punktvolken, Ablestung von Höhenlinien und PGM
+\end{itemize}
+zu Simpsonsche Regel: \newline
+Wenn $F,m$ nicht gemessen $\Longrightarrow$ vereinfachung: $V = \frac{l}{2}(F_1 + F_2)$.
+\paragraph{Beispiel für Simpsonsche Regel (Genauigkeit)}
+\begin{gather*}
+	l = 20 m \\
+	F_{1,2,m} = 15m^2 \\
+	\sigma_F = 0,52m^2 \\
+	\sigma_l = 0,5cm \\
+	\Rightarrow sigma_V = 7,4m^3 
+\end{gather*}
+\paragraph{Beispiel für dreiseitiges Prisma}
+\begin{gather*}
+	F_3 = 200m^3 \\
+	h_1 = 10m \\
+	h_2 = 13m \\
+	h_3 =11m \\
+	\sigma_F = 0,52 m^2 \\
+	\sigma_h = 0,01 m \\
+	\Rightarrow \sigma_V = 6m^3
+\end{gather*}
+\end{document}
