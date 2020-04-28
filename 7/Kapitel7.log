@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  25 APR 2020 14:33
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.2)  28 APR 2020 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,14 +546,89 @@ Package titlesec Warning: You are using an old interface for page styles
 
  [1
 
-] [2] (./Kapitel7.aux) ) 
-Here is how much of TeX's memory you used:
- 17032 strings out of 492472
- 351795 string characters out of 6129299
- 425129 words of memory out of 5000000
- 21449 multiletter control sequences out of 15000+600000
- 538998 words of font info for 67 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 45i,6n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+]
+Underfull \hbox (badness 10000) in paragraph at lines 40--50
 
-Output written on Kapitel7.pdf (2 pages).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--50
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--89
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 91--95
+
+ []
+
+
+Overfull \hbox (0.22057pt too wide) in paragraph at lines 91--95
+\TU/TimesNewRoman(0)/m/n/12 Nullpunktfehler Additionskonstante, $\OMS/cmsy/m/n/
+12 )$ \TU/TimesNewRoman(0)/m/n/12 Kombination aus EDM und Prismenanteil Kalibri
+erung. 
+ []
+
+
+Overfull \hbox (0.55472pt too wide) in paragraph at lines 114--115
+\TU/TimesNewRoman(0)/m/n/12 und zufällige Abweichungen Bestimmung der Differenz
+en durch interferometrische Winkelmes-
+ []
+
+[4] [5]
+Overfull \hbox (3.82425pt too wide) in paragraph at lines 167--168
+[]  \TU/TimesNewRoman(0)/bx/n/12 (5) \TU/TimesNewRoman(0)/m/n/12 Reflektor ist 
+mit GNSS-Empfänge ausgerüstet(Low Cost) Ausrichtung des Tachymeters
+ []
+
+[6]
+File: flussdiagramm.png Graphic file (type bmp)
+<flussdiagramm.png>
+
+Overfull \hbox (13.70468pt too wide) in paragraph at lines 214--215
+[]\TU/TimesNewRoman(0)/m/n/12 Stellgräßen aus Bewegungsmodell für einige Sekund
+en (unveränderte Geschwindigkeit
+ []
+
+File: bild.png Graphic file (type bmp)
+<bild.png>
+[7] [8] [9] (./Kapitel7.aux) ) 
+Here is how much of TeX's memory you used:
+ 17060 strings out of 492472
+ 352392 string characters out of 6129299
+ 431129 words of memory out of 5000000
+ 21469 multiletter control sequences out of 15000+600000
+ 539022 words of font info for 70 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 45i,9n,79p,396b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Kapitel7.pdf (9 pages).
