@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{setspace,graphicx,amsmath,geometry,fontspec,titlesec,soul,bm,subfigure}
+\titleformat{\section}[block]{\LARGE\bfseries}{\arabic{section}}{1em}{}[]
+\titleformat{\subsection}[block]{\Large\bfseries\mdseries}{\arabic{section}.\arabic{subsection}}{1em}{}[]
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\arabic{subsection}-\alph{subsubsection}}{1em}{}[]
+\titleformat{\paragraph}[block]{\small\bfseries}{[\arabic{paragraph}]}{1em}{}[]
+\setmainfont{Times New Roman}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand\contentsname{Inhaltverzeichnis}
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+	\newpagestyle{main}{            
+		\sethead{}{Kapitel 6}{} 
+		\setfoot{}{\thepage}{}
+		\headrule
+		\footrule
+			}
+	\pagestyle{main}
+\tableofcontents
+\newpage
+\section{Terrestrisches Laserscanning}	
+\subsection{Grundlagen und Systemübersicht}
+\begin{itemize}
+	\item Winkelmessung über Encoder, gleichabständige Tastung. 
+	\item Streckenmessung im Impuls- oder Phasenvergleichsverfahren
+	\item Strhachskompensator und/oder Horizontier- (und Zentrier) rorichtung (nicht Zwangsweise notwendig)
+	\item Intensität der reflektierten Signals als vierte Messgrößer $\Rightarrow$ Keine Messung von Einzelpunkten
+	\item Integration einer Kamera (????????) Standard; Nutzung nur zur Texturierung
+	\item z.T weitere Sensoren wie GNSS-Empfänger integriert $\Rightarrow$ außerdem:
+	\begin{itemize}
+		\item Scannende Tachymeter
+		\item tachymetrisch messende Scanner
+	\end{itemize}
+\end{itemize}
+Einteilung nach Reichweite: 
+\paragraph{Nahbereich 100 bis 200m:}
+Innenraumaufnahme, (?????) Management, 3D-Stadtmodelle, Industrievermessung,Monitoring...
+\paragraph{Fernbereich >200m}
+Monitoring, Außenraumaufnahme, Bergbau(Tagebau), Naturgefahren
+\subsection{Messverfahren}
+\subsubsection{Streckenmessung}
+\paragraph{Impulsverfahren}
+\begin{itemize}
+	\item Reichweite hoch: $\leq 4km$
+	\item Messrate geringer: $\leq 100 MHz$
+	\item Genauigkeit geringer
+\end{itemize}
+\paragraph{Phasenvergleichverfahren}
+\begin{itemize}
+	\item Reichweite gering $\leq 200 m$
+	\item Messrate höher $> 1000MHz$
+	\item Genauigkeit höher
+\end{itemize}
+\paragraph{Kombination}
+Eigenschaft auch als Kombination.
+\subsubsection{Winkelmessung (Hz, V)}
+\begin{itemize}
+	\item Drehgebar mit Inkrementalteilung(Inkrementelle Encoder)
+	\item Äquidistante Drehbewegung steuert Aussendung des Lasersignals
+	\item Genauigkeit $1mgon$ bis $20mgon$
+\end{itemize}
+\subsubsection{Intensitätsmessung}
+\begin{itemize}
+	\item reflektierte Signalstärke $\Rightarrow 4D-Laserscanner$!
+\end{itemize}
+\subsection{Auswertestrategien}
+\subsection{Registrierung und Georeferenzierung}
+\subsection{Fehlerquellen}
+Strahdivergenz:
+\begin{itemize}
+	\item Strahldurchmesser in Entfernung $Z$: $D(Z)$
+	\item Strahldurchmesser beim Verlassen des Scanners: $D_0$
+	\item Wellenlänge: $\lambda$
+\end{itemize}
+\begin{equation*}
+	D(Z) = D_0 \sqrt{1 + \frac{4}{\pi} \frac{\lambda \cdot Z^2}{D_0^2}} \approx D_0 + \frac{4 \cdot \lambda}{\pi \cdot D_0} \cdot z
+\end{equation*}
+Beispiel: $\lambda = 660nm$ (roter Laser), $D_0 = 3mm$
+\begin{table}[ht] \centering
+	\begin{tabular}{|l|l|}
+		\hline
+		$Z$    & $D(Z)$   \\ \hline
+		$10m$  & $6mm$    \\ \hline
+		$100m$ & $3cm$    \\ \hline
+		$1km$  & $28,3cm$ \\ \hline
+	\end{tabular}
+\end{table}
+\subsection{Flächen- und Volumenbestimmung}
+\subsection{Prüfung und Kalibrierung}
+\subsubsection{Komponentenprüfung}
+\paragraph{Entfernungsmessung}
+\begin{itemize}
+	\item Einzelmessung nicht zu realisierung
+	\item Nutzung von Zielzeichen oder Kugeln
+	\item Vergleich mit Soll-Werten
+\end{itemize}
+\paragraph{Winkelmessung}
+\begin{itemize}
+	\item wie bei Entfernungsmessung, aber Betrachtung von Quer- oder Höhenabweichungen $\Rightarrow$ zur Zeit systemüberprüfung (da Komponentenüberprüfung schwer realisierbar)
+\end{itemize}
+\subsubsection{Typische Fragestellung der Systemüberprüfung}
+\begin{itemize}
+	\item Messrauschen
+	\item Auflösung (Detailiertheit)
+	\item Kantenerkennung
+	\item Oberflächenbeschaffenheit
+	\item Gesamtsystem
+	\item Identifizierung individueller Einflussquellen(Elementarfehler)
+\end{itemize}
+\subsubsection{Prüfverfahren nach VDI/VDE}
+\paragraph{Antastabweichung}
+\begin{itemize}
+	\item Nutzung einer Kugel mit grob bekannten Radius 
+	\item zehnmalige Bestimmung des Radius und des Mittelpunktes von verschiedene Position
+	\item radiale Abweichung $\bar{\Delta R} = \frac{1}{n} \sum_{i=1}^{n} v_i$ pro Position
+	\item mittlere Antastabweichung $S_R = \sqrt{\frac{\sum S^2_{\bar{R}}}{m}}$ mit $S^2_{\bar{R}}$ Varianz des Radius pro Person ist.
+\end{itemize}
+\paragraph{Abstandsabweichung}
+\begin{itemize}
+	\item Nutzung im Raum verteilter gleich geformter Kugeln
+	\item Abstände der Kugelmittelpunkte sind bekannt 
+	\item Bestimmung der Kugelmittelpunkte und der Abstände aus den Messdaten: $\bar{\Delta L} = \frac{1}{n} \sum_{i=1}^{n} \Delta L_i$ mit $\Delta L_i = L_{gemessen,i} - L_{soll,i}$ 
+	\item mittlere Abstandsabweichung: $s_{\bar{l}} = \sqrt{\frac{\sum \Delta L_i^2}{n}}$
+\end{itemize}
+\paragraph{Ebenheitsabweichung}
+\begin{itemize}
+	\item Abweichung der Messungen von einer ausgleichenden Ebene
+	\item Nutzung geradeförmiger Prüfkörper
+\end{itemize}
+pro Ebene:
+\begin{gather*}
+	R_E = \frac{1}{n} \sum_{i=1}^{n} V_{E,i} \
+\end{gather*}
+mittelere Ebenheitsabweichung:
+\begin{equation*}
+	S_E = \sqrt{\frac{\sum S^2_{E,j}}{m}}
+\end{equation*}
+$m$ ist Anzahl der Ebene, $S_{E,j}$ ist Standabweichung pro Ebene. 
+\end{document}
